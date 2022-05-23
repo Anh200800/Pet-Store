@@ -1,32 +1,21 @@
 import React from "react";
 import product1 from "../assets/images/product1.png";
 
-const Product = () => {
+const Product = (data) => {
   return (
+    {data.map((product) => (
     <div className="product">
       <div className="product-list">
         <div className="product-card">
-          <img src={product1} alt="" />
-          <h3>Eatmeet food</h3>
-          <p>$25.00</p>
+          <img src={product.img} alt="" />
+          <h3>{product.title}</h3>
+          <p>{product.price}</p>
         </div>
-        <div className="product-card">
-          <img src={product1} alt="" />
-          <h3>Eatmeet food</h3>
-          <p>$25.00</p>
-        </div>
-        <div className="product-card">
-          <img src={product1} alt="" />
-          <h3>Eatmeet food</h3>
-          <p>$25.00</p>
-        </div>
-        <div className="product-card">
-          <img src={product1} alt="" />
-          <h3>Eatmeet food</h3>
-          <p>$25.00</p>
+       
         </div>
       </div>
-    </div>
+
+    ))}
   );
 };
 

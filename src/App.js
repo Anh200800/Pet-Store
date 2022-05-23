@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+import React from 'react';
 import Shop from './pages/Shop';
 function App() {
+ 
   return (
     <div className="App">
       <Shop />

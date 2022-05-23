@@ -15,32 +15,32 @@ function Header() {
             <div className="menu">
               <ul className="menu-list">
                 <li className="menu-item">
-                  <a href="" className="menu-link">
+                  <a className="menu-link">
                     Home
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="" className="menu-link">
+                  <a className="menu-link">
                     About
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="" className="menu-link">
+                  <a className="menu-link">
                     Pages
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="" className="menu-link">
+                  <a  className="menu-link">
                     News
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="" className="menu-link">
+                  <a  className="menu-link">
                     Shops
                   </a>
                 </li>
                 <li className="menu-item">
-                  <a href="" className="menu-link">
+                  <a  className="menu-link">
                     Contact
                   </a>
                 </li>

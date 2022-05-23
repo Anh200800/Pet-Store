@@ -1,0 +1,58 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "img": "img/product1.png",
+            "title": "Eatmeet food",
+            "price": "25.00"
+        },
+           {
+            "id": 2,
+            "img": "img/product1.png",
+            "title": "Pet natural lysine",
+            "price": "25.00"
+        },
+           {
+            "id": 3,
+            "img": "img/product1.png",
+            "title": "Reflex lamb rice",
+            "price": "25.00"
+        },
+           {
+            "id": 4,
+            "img": "img/product1.png",
+            "title": "Natural food pik",
+            "price": "25.00"
+        },
+           {
+            "id": 5,
+            "img": "img/product1.png",
+            "title": "Gray sweater",
+            "price": "25.00"
+        },
+           {
+            "id": 6,
+            "img": "img/product1.png",
+            "title": "Get speacil food",
+            "price": "25.00"
+        },
+           {
+            "id": 7,
+            "img": "img/product1.png",
+            "title": "Bail on rape toy",
+            "price": "25.00"
+        },
+           {
+            "id": 8,
+            "img": "img/product1.png",
+            "title": "Multipatel pet food",
+            "price": "25.00"
+        },
+           {
+            "id": 9,
+            "img": "img/product1.png",
+            "title": "Interactive toy",
+            "price": "25.00"
+        }
+    ]
+}
