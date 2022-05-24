@@ -4,20 +4,28 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Product from "../components/Product";
 import productApi from '../api/productApi';
+import SheletonCard from '../components/SheletonCard';
+
 
 function Shop() {
   const [productList, setProductList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
    useEffect(() => {
-  const fetchProductList = async () => {
-  try {
-  const response = await productApi.getAll();
-  console.log('Fetch products successfully: ', response);
-  setProductList(response);
-  } catch (error) {
-  console.log('Failed to fetch product list: ', error);
-  }
-  }
-  fetchProductList();
+     setTimeout(() => {
+
+       const fetchProductList = async () => {
+       try {
+       const data = await productApi.getAll();
+       console.log('Fetch products successfully: ', data);
+       setProductList(data);
+       } catch (error) {
+       console.log('Failed to fetch product list: ', error);
+       }
+       setLoading(false)
+       }
+       fetchProductList();
+     }, 5000)
    }, []);
    
    return (
@@ -33,7 +41,10 @@ function Shop() {
            <div className="shop-product">
              
 
-                 <Product data={productList} />
+                {
+
+               loading ? <SheletonCard cards={8} /> :  <Product data={productList} />
+                } 
       
             
         </div>
