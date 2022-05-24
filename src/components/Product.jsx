@@ -1,21 +1,26 @@
 import React from "react";
-import product1 from "../assets/images/product1.png";
 
-const Product = (data) => {
+const Product = (props) => {
+  const data = props.data
+  console.log('check data: ', data)
+// const array = Object.values(data);
+
   return (
-    {data.map((product) => (
-    <div className="product">
-      <div className="product-list">
-        <div className="product-card">
-          <img src={product.img} alt="" />
-          <h3>{product.title}</h3>
-          <p>{product.price}</p>
-        </div>
-       
-        </div>
-      </div>
-
-    ))}
+  <>
+      {data.map((product) => {
+        return (
+          <div className="product" key={product.id}>
+            <div className="product-list">
+              <div className="product-card">
+                <img src={product.img} alt="" />
+                <h3>{product.title}</h3>
+                <p>{product.price}</p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

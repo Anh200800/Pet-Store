@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import Banner from "../components/Banner"
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
@@ -10,7 +10,6 @@ function Shop() {
    useEffect(() => {
   const fetchProductList = async () => {
   try {
-  // const params = { _page: 1, _limit: 5 };
   const response = await productApi.getAll();
   console.log('Fetch products successfully: ', response);
   setProductList(response);
@@ -19,9 +18,10 @@ function Shop() {
   }
   }
   fetchProductList();
-  }, []);
-  return (
-    <div className="shop">
+   }, []);
+   
+   return (
+     <div className="shop">
       <Header />
       <Banner />
       <div className="container">
@@ -30,9 +30,12 @@ function Shop() {
         <div className="shop-navbar">
         <NavBar />
         </div>
-        <div className="shop-product">
+           <div className="shop-product">
+             
 
-        <Product data={productList} />
+                 <Product data={productList} />
+      
+            
         </div>
 
         </div>
