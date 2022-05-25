@@ -4,9 +4,7 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import Product from "../components/Product";
 import productApi from '../api/productApi';
-import SheletonCard from '../components/SheletonCard';
-
-
+import SkeletonCard from '../components/SkeletonCard';
 function Shop() {
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,34 +23,30 @@ function Shop() {
        setLoading(false)
        }
        fetchProductList();
-     }, 5000)
+     }, 3000)
    }, []);
    
    return (
      <div className="shop">
-      <Header />
-      <Banner />
-      <div className="container">
-
-      <div className="shop-grid">
-        <div className="shop-navbar">
-        <NavBar />
-        </div>
+       <Header />
+       <Banner />
+       <div className="container">
+         <div className="shop-grid">
+           <div className="shop-navbar">
+             <NavBar />
+           </div>
            <div className="shop-product">
-             
+         
 
-                {
+             {
 
-               loading ? <SheletonCard cards={8} /> :  <Product data={productList} />
+               loading ? <SkeletonCard  /> :  <Product data={productList} />
                 } 
-      
-            
-        </div>
-
-        </div>
-      </div>
-      </div>
-  );
+           </div>
+         </div>
+       </div>
+     </div>
+   );
 }
 
 export default Shop;
