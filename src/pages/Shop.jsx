@@ -2,9 +2,10 @@ import React, {useEffect, useState} from 'react';
 import Banner from "../components/Banner"
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
-import Product from "../components/Product";
+import ProductList from '../components/ProductList';
 import productApi from '../api/productApi';
 import SkeletonCard from '../components/SkeletonCard';
+
 function Shop() {
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,13 +24,14 @@ function Shop() {
        setLoading(false)
        }
        fetchProductList();
-     }, 3000)
+     }, 1500)
    }, []);
+
+
    
    return (
      <div className="shop">
-       <Header />
-       <Banner />
+       
        <div className="container">
          <div className="shop-grid">
            <div className="shop-navbar">
@@ -40,7 +42,7 @@ function Shop() {
 
              {
 
-               loading ? <SkeletonCard  /> :  <Product data={productList} />
+               loading ? <SkeletonCard  /> :  <ProductList data={productList} />
                 } 
            </div>
          </div>

@@ -1,22 +1,22 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+
 import icon1 from "../assets/images/icon-product1.png"
 import icon2 from "../assets/images/icon-product2.png"
 
-const Product = (props) => {
-  const data = props.data
-  console.log('check data: ', data)
-// const array = Object.values(data);
+const Product = ({product}) => {
 
-  return (
+    const history = useNavigate();
+const handleClick = () => {
+history(`/product/${product.id}` )
+}
+return (
   
-    <div className="product" >
+  <div className="product" onClick={handleClick}>
       <div className="product-list" >
-      {data.map((product) => {
-        return (
-          <>
               <div className="product-card">
-                <img src={icon1} alt="" />
-                <img src={icon2} alt="" />
+                 <img src={icon1} alt="" />
+                <img src={icon2} alt="" /> 
 
                 <img src={product.img} alt="" />
                 <a href="#" className="product-button">Add to cart</a>
@@ -24,13 +24,11 @@ const Product = (props) => {
                 <p>{product.price}</p>
               </div>
               
-          </>
-        );
-      })}
-      </div>
+       </div>
     
-      </div>
+       </div>
   );
-};
+}
+
 
 export default Product;

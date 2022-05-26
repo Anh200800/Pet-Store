@@ -10,10 +10,13 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="/product" element={<Shop />}>
-            <Route path="product/:productId" element={<DetailProduct />} />
+          <Route path="product" element={<Shop />} >
+          <Route path="product/:productId" element={<DetailProduct />} ></Route>
           </Route>
+
         </Route>
+          
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import line from "../assets/images/lines.png";
 import cart from "../assets/images/icon-cart.png";
 import search from "../assets/images/icon-search.png";
+import {Link} from 'react-router-dom'
 
 function Header() {
   return (
@@ -18,6 +19,7 @@ function Header() {
                   <a className="menu-link">
                     Home
                   </a>
+
                 </li>
                 <li className="menu-item">
                   <a className="menu-link">
@@ -36,7 +38,7 @@ function Header() {
                 </li>
                 <li className="menu-item">
                   <a  className="menu-link">
-                    Shops
+                  <Link to='/product'>Shop</Link>
                   </a>
                 </li>
                 <li className="menu-item">
