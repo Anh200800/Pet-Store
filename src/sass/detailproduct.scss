@@ -1,0 +1,11 @@
+.detail {
+    &-content {
+        display: flex;
+        gap: 30px;
+
+    }
+    &-img {
+        width: 570px;
+        height: 610px;
+    }
+}
