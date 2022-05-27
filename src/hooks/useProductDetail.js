@@ -4,16 +4,17 @@ export default function useProductDetail(productId) {
     const [product,setProduct] = useState({})
     const [Loading,setLoading] = useState(true)
 useEffect(()=> {
-    (async() => {
-        try{
-            setLoading(true)
-            const result = await productApi.get(productId)
-            console.log(result)
-        } catch (error) {
-            console.log('Failed to fetch product: ', error)
-        }
-        setLoading(false)
-    })();
+     const fetchProductDetail = async () => {
+       try {
+       const result = await productApi.get(productId);
+       console.log('Fetch products successfully: ', result);
+       setProduct(result);
+       } catch (error) {
+       console.log('Failed to fetch product list: ', error);
+       }
+       setLoading(false)
+       }
+       fetchProductDetail();
 } ,[productId]);
 return {product, Loading}
     

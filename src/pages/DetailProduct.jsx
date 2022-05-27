@@ -1,23 +1,29 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import ProducThumnail from "../components/ProductThumbnail";
+import DetailThumnail from "../components/DetailThumbnail";
+import DetailInfo from "../components/DetailInfo";
+import AddToCartForm from "../components/AddToCartForm";
 import useProductDetail from "../hooks/useProductDetail";
 function DetailProduct() {
   let { productId } = useParams();
 // console.log(params)
   const {product, loading} = useProductDetail(productId)
+  if (loading) {
+    return <h2>Loading</h2>
+  }
+  const handleAđdToCartSubmit = (formValues) => {
+    console.log('Form submit: ', formValues)
+  }
     return (
       <div className="detail">
         <div className="container">
           <div className="detail-content">
             <div className="detail-thumb">
-<ProducThumnail />
+           <DetailThumnail product={product} />
             </div>
             <div className="detail-info">
-              <h3>
-                Pet natural lysine <span>25.00</span>
-              </h3>
-              <p></p>
+           <DetailInfo product={product} />
+           <AddToCartForm onSubmit={handleAđdToCartSubmit}/>
             </div>
           </div>
         </div>
