@@ -1,6 +1,7 @@
 import React from "react";
-import {yupResolver} from '@hookform/resolvers/yup'
-// import InputField from 'components/form-controls/InputField'
+import { yupResolver } from '@hookform/resolvers/yup'
+import QuantityField from "./form-controls/QuantityField";
+import { Button } from "@material-ui/core";
 import { useForm } from "react-hook-form";
 import * as yup from 'yup';
 const AddToCartForm = ({onSubmit = null}) => {
@@ -21,10 +22,9 @@ const handleSubmit = async (values) => {
 
     return (
       <form onSubmit={form.handleSubmit(handleSubmit)}>
-{/* <InputField name="quantity" label="quantity" form={form}/> */}
-{/* <Button type ="submit"> Add to cart</Button> */}
+        {/* <QuantityField name="quantity" label="quantity" form={form}/> */}
+        <Button type ="submit"> Add to cart</Button>
       </form>
-        
-    )
+    );
 }
 export default AddToCartForm;
