@@ -1,6 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import Banner from "../components/Banner"
-import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import ProductList from '../components/ProductList';
 import productApi from '../api/productApi';

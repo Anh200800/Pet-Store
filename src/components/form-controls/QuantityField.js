@@ -1,11 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react';
 import { Box, FormControl, IconButton, makeStyles, OutlinedInput, Typography } from '@material-ui/core'
-import {
- InputLabel
-} from "@material-ui/core/InputLabel";
-// import { AddCircleOutline, RemoveCircleOutline } from "@material-ui/core/icons";
 import { Controller } from 'react-hook-form'
-
 const useStyles = makeStyles((theme) => ({
   root: {},
   box: {
@@ -19,12 +14,14 @@ const useStyles = makeStyles((theme) => ({
 
 function QuantityField(props) {
   const classes = useStyles();
-  const { form, name, label, disabled } = props;
+  const { form, name, label } = props;
   const { errors, setValue } = form;
-  const hasError = !!errors[name];
+  // const hasError = !!errors[name];
+  console.log('check: ', name )
+
  return (
    <FormControl
-     error={hasError}
+    //  error={hasError}
      fullWidth
      margin="normal"
      variant="outlined"
@@ -34,41 +31,24 @@ function QuantityField(props) {
      <Controller
        name={name}
        control={form.control}
-       render={({ onchange, onBlur, value, name }) => (
+       render={({ onChange, onBlur, value, name }) => (
          <Box className={classes.box}>
+           <IconButton onClick={()=> setValue(name, Number.parseInt(value) ? Number.parseInt(value) - 1 : 1)}>
+                   -
+           </IconButton>
            <OutlinedInput
-             type="number"
              id={name}
-             disabled={disabled}
+             type="number"
              value={value}
-             onchange={onchange}
+             onChange={onChange}
              onBlur={onBlur}
            />
-           <IconButton
-             onClick={() =>
-               setValue(
-                 name,
-                 Number.parseInt(value) ? Number.parseInt(value) - 1 : 1
-               )
-             }
-               >
-                   -
-             {/* <RemoveCircleOutline /> */}
-           </IconButton>
-           <IconButton
-             onClick={() =>
-               setValue(
-                 name,
-                 Number.parseInt(value) ? Number.parseInt(value) + 1 : 1
-               )
-             }
-               >
-                   +
-             {/* <AddCircleOutline /> */}
+           <IconButton onClick={()=> setValue(name, Number.parseInt(value) ? Number.parseInt(value) + 1 : 1)}>
+                 +
            </IconButton>
          </Box>
        )}
-     />
+       />
    </FormControl>
  );   
 }
