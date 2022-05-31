@@ -8,7 +8,6 @@ import useProductDetail from "../hooks/useProductDetail";
 import {addToCart} from '../features/Cart/CartSlice'
 function DetailProduct() {
   let { productId } = useParams();
-// console.log(params)
   const { product, loading } = useProductDetail(productId)
   const dispatch = useDispatch()
   if (loading) {

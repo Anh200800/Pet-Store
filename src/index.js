@@ -7,7 +7,7 @@ import './sass/index.scss'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Shop from './pages/Shop';
 import DetailProduct from './pages/DetailProduct';
-import Cart from '../src/features/Cart/Cart'
+import Cart from '../src/pages/Cart'
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>

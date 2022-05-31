@@ -18,7 +18,6 @@ const handleSubmit = async (values) => {
     if(onSubmit) {
         await onSubmit(values)
     }
-    console.log('check value: ', form)
 }
     return (
       <form onSubmit={form.handleSubmit(handleSubmit)}>

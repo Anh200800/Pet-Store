@@ -15,8 +15,6 @@ function App() {
         <Banner />
 </nav>
 <Outlet>
-        <Cart />
-  {/* <Shop /> */}
 </Outlet>
     </div>
 
