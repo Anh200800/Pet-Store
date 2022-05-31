@@ -1,18 +1,27 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import DetailThumnail from "../components/DetailThumbnail";
 import DetailInfo from "../components/DetailInfo";
 import AddToCartForm from "../components/AddToCartForm";
 import useProductDetail from "../hooks/useProductDetail";
+import {addToCart} from '../features/Cart/CartSlice'
 function DetailProduct() {
   let { productId } = useParams();
 // console.log(params)
-  const {product, loading} = useProductDetail(productId)
+  const { product, loading } = useProductDetail(productId)
+  const dispatch = useDispatch()
   if (loading) {
     return <h2>Loading</h2>
   }
   const handleAđdToCartSubmit = (formValues) => {
-    console.log('Form submit: ', formValues)
+    const action = addToCart({
+      id: product.id,
+      product,
+      quantity: formValues.quantity
+    });
+    console.log('check action: ',action)
+    dispatch(action)
   }
     return (
       <div className="detail">

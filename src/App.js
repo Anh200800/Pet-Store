@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import DetailProduct from './pages/DetailProduct';
 import Header from './components/Header';
 import Banner from './components/Banner';
+import Cart from './pages/Cart';
 function App() {
  
   return (
@@ -11,9 +12,10 @@ function App() {
     <div className="App">
 <nav>
      <Header />
-       <Banner />
+        <Banner />
 </nav>
 <Outlet>
+        <Cart />
   {/* <Shop /> */}
 </Outlet>
     </div>

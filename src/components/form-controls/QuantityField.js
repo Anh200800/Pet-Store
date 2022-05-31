@@ -16,12 +16,11 @@ function QuantityField(props) {
   const classes = useStyles();
   const { form, name, label } = props;
   const { errors, setValue } = form;
-  // const hasError = !!errors[name];
-  console.log('check: ', name )
+  const hasError = !!errors[name];
 
  return (
    <FormControl
-    //  error={hasError}
+     error={hasError}
      fullWidth
      margin="normal"
      variant="outlined"
@@ -37,6 +36,7 @@ function QuantityField(props) {
                    -
            </IconButton>
            <OutlinedInput
+
              id={name}
              type="number"
              value={value}

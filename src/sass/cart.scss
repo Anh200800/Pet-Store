@@ -1,0 +1,8 @@
+.cart {
+     display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+    // &-box {
+    //     display: grid;
+    //     grid-template-columns: repeat(5,1fr);
+    // }
