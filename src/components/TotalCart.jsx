@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { cartTotalSelector, cartItemsCountSelector } from '../features/Cart/selectors'
+import { cartTotalSelector } from '../features/Cart/selectors'
 function TotalCart() {
     const cartTotal = useSelector(cartTotalSelector);
     

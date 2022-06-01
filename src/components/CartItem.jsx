@@ -7,33 +7,36 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   cartItemTotal
 } from "../features/Cart/selectors";
-import { removeFromCart } from "../features/Cart/CartSlice";
+import { removeFromCart, decreaseQuantity, increaseQuantity } from "../features/Cart/CartSlice";
 
 
 
 
 function CartItem({ product }) {
-    const schema = yup.object().shape({
-      quantity: yup
-        .number()
-        .min(1, "Minimum value is 1")
-        .required("Please enter quantity")
-        .typeError("please enter a number"),
-    });
-  const form = useForm({
-    defaultValues: {
-      quantity: 1,
-    },
-    resolver: yupResolver(schema),
-  });
+   
   const ItemTotal = useSelector(cartItemTotal);
 const dispatch = useDispatch();
 const handleRemoveItem = () => {
+
   const action = removeFromCart({
     id: product.id,
   });
   dispatch(action);
 };
+const handleDecreaseQuantity = () => {
+   const action = decreaseQuantity({
+      id: product.id,
+      quantity: product.quantity
+    });
+    dispatch(action)
+}
+const handleIncreaseQuantity = () => {
+   const action = increaseQuantity({
+      id: product.id,
+      quantity: product.quantity
+    });
+    dispatch(action)
+}
   return (
     <div className="container">
       <div className="item">
@@ -45,9 +48,13 @@ const handleRemoveItem = () => {
           </div>
           <div className="item-right">
             <h5>{product.product.price}</h5>
-            <QuantityField value={product.quantity} name="quantity"  form={form} />
+            <div>
+              <span className="item-btn" onClick={() => handleDecreaseQuantity()}>-</span>
+              <span className="item-quantity">{product.quantity}</span>
+              <span className="item-btn" onClick={() => handleIncreaseQuantity()}>+</span>
+            </div>
             <h5>{ ItemTotal}</h5>
-            <a href="" onClick={handleRemoveItem}>X</a>
+            <h3 onClick={()=>handleRemoveItem()}>X</h3>
           </div>
         </div>
       </div>

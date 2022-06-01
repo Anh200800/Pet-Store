@@ -31,11 +31,29 @@ const cartSlice = createSlice({
             }
         },
         removeFromCart(state, action) {
-            const idNeedToRemove = action.payload;
-            state.cartItems = state.cartItems.filter((x) => x.id !== idNeedToRemove)
-        }
+            
+            const {id} = action.payload;
+            state.cartItems = state.cartItems.filter((x) => x.id !== id)
+            // console.log('check id re: ',product.id)
+            // return state.cartItems;
+        },
+        decreaseQuantity(state, action) {
+            const itemQuantity = action.payload;
+            const itemIndex = state.cartItems.findIndex((x) => x.id === itemQuantity.id)
+            if(state.cartItems[itemIndex].quantity > 1){
+               state.cartItems[itemIndex].quantity -= 1; 
+            }
+        },
+         increaseQuantity(state, action) {
+            const itemQuantity = action.payload;
+            const itemIndex = state.cartItems.findIndex((x) => x.id === itemQuantity.id)
+            if(state.cartItems[itemIndex].quantity > 1){
+               state.cartItems[itemIndex].quantity += 1; 
+            }
+        },
+
     },
 });
 const { actions, reducer } = cartSlice;
-export const {showMiniCart, hideMiniCart, addToCart, setQuantity, removeFromCart} = actions;
+export const {showMiniCart, hideMiniCart, addToCart, setQuantity, removeFromCart, decreaseQuantity, increaseQuantity} = actions;
 export default reducer

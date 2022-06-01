@@ -22,4 +22,16 @@
     height: 124px;
     border-radius: 5px;
 }
+&-btn{
+  padding: 5px;
+  background: #ffff;
+  border: 1px solid black;
+  cursor: pointer;
+}
+&-quantity{
+  padding: 5px 10px;
+  background: #ffff;
+    border: 1px solid black;
+
+}
 }
