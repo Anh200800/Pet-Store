@@ -1,23 +1,17 @@
 .cart {
-
 &-list {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 &-right {
     display: flex;
-    justify-content: space-between;
-    align-items:  center;
+    // justify-content: space-between;
+    // align-items:  center;
     gap: 150px;
 }
 &-line {
     border: 1px  solid #ece7e2;
 }
-&-img {
-    width: 124px;
-    height: 124px;
-    border-radius: 5px;
-}
+
 }
    

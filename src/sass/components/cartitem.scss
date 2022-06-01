@@ -1,0 +1,25 @@
+.item {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+     &-right {
+        display: flex;
+        align-items: center;
+        
+        gap: 150px;
+    }
+   &-img {
+    width: 124px;
+    height: 124px;
+    border-radius: 5px;
+}
+}
