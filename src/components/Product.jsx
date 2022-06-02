@@ -1,8 +1,8 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
-import icon1 from "../assets/images/icon-product1.png"
-import icon2 from "../assets/images/icon-product2.png"
+// import icon1 from "../assets/images/icon-product1.png"
+// import icon2 from "../assets/images/icon-product2.png"
 
 const Product = ({product}) => {
 
@@ -15,11 +15,10 @@ return (
   <div className="product" onClick={handleClick}>
       <div className="product-list" >
               <div className="product-card">
-                 <img src={icon1} alt="" />
-                <img src={icon2} alt="" /> 
+                 {/* <img src={icon1} alt="" />
+                <img src={icon2} alt="" />  */}
 
                 <img src={product.img} alt="" />
-                <a href="#" className="product-button">Add to cart</a>
                 <h3>{product.title}</h3>
                 <p>{product.price}</p>
               </div>
