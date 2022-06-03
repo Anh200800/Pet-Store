@@ -34,8 +34,6 @@ const cartSlice = createSlice({
             
             const {id} = action.payload;
             state.cartItems = state.cartItems.filter((x) => x.id !== id)
-            // console.log('check id re: ',product.id)
-            // return state.cartItems;
         },
         decreaseQuantity(state, action) {
             const itemQuantity = action.payload;
@@ -47,7 +45,7 @@ const cartSlice = createSlice({
          increaseQuantity(state, action) {
             const itemQuantity = action.payload;
             const itemIndex = state.cartItems.findIndex((x) => x.id === itemQuantity.id)
-            if(state.cartItems[itemIndex].quantity > 1){
+            if(state.cartItems[itemIndex].quantity >= 1){
                state.cartItems[itemIndex].quantity += 1; 
             }
         },

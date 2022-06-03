@@ -12,4 +12,26 @@
     &-navbar {
         width: 270;
     }
+    @media screen and (max-width: 900px) {
+        &-product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+        }
+    }
+    @media screen and (max-width: 440px) {
+         &-grid {
+        display: grid;
+        row-gap: 30px;
+        
+    }
+      &-product {
+           display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    }
+
+
 }

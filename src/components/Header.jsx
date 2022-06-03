@@ -13,15 +13,20 @@ import { cartItemsCountSelector } from "../features/Cart/selectors";
 
 function Header() {
   const cartItemsCount = useSelector(cartItemsCountSelector)
-    const [click, setClick] = useState(false);
-const handleClick = () => setClick(!click)
-console.log('chrck', click)
+  const [click, setClick] = useState(false);
+  const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click)
+    
+  }
   return (
     <div className="wrapper">
       <img src={line} alt="" />
         <div className="container">
       <div className="header">
             <img src={logo} alt="" className="header-logo" />
+      <a  className="header-bars" onClick={handleClick}><img src={click ? clear : bars} alt="" /></a>
               <ul className={click ? 'header-menu active ' : 'header-menu'}  >
                 <li className="header-menu-item">
                   <a className="header-menu-link">Home</a>
@@ -52,7 +57,6 @@ console.log('chrck', click)
                 <span className="header-badge">{cartItemsCount}</span>
               </a>
               </Link>
-              <a  className="header-bars" onClick={handleClick}><img src={click ? clear : bars} alt="" /></a>
             
           </div>
         </div>

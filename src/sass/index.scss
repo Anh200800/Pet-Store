@@ -1,5 +1,6 @@
 @import "./base";
 @import "./mixin.scss";
+@import "./variables";
 
 @import "./components/banner";
 @import "./components/header";
@@ -8,6 +9,7 @@
 @import "./components/skeletonCart";
 @import "./components/cartitem.scss";
 @import "./components/totalcart.scss";
+@import "./components/footer.scss";
 
 @import "./cart.scss";
 @import "./shop.scss";

@@ -22,7 +22,7 @@ function Shop() {
        setLoading(false)
        }
        fetchProductList();
-     }, 1500)
+     }, 1000)
    }, []);
 
 

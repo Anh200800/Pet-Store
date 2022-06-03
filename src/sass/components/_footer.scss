@@ -1,0 +1,133 @@
+.footer {
+    background-color: #222222;
+    margin-top: 50px;
+    // max-height: 560px;
+    // &-background {
+    //     position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // width: 100%;
+    // overflow: hidden;
+    // line-height: 0;
+    // }
+    &-background .shape-fill {
+    fill: #FFFFFF;
+}
+  &-top {
+    padding: 10px 0px 40px 0px;
+  }
+  &-column {
+      margin: 0 auto;
+  }
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 130px;
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  &-desc {
+    color: $text-color;
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 30px;
+  }
+  .social-item {
+    cursor: pointer;
+    &:hover {
+      color: white;
+    }
+  }
+  &-line {
+      border: 2px solid #393939 ;
+      margin-top: 60px;
+  }
+  &-heading {
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  &-links {
+    list-style: none;
+  }
+  &-item {
+    margin-bottom: 30px;
+  }
+  &-link {
+    display: inline-block;
+    color: $text-color;
+  }
+  &-info {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  &-info li {
+    margin-bottom: 15px;
+    line-height: lineH(30, 16);
+    color: $text-color;
+  }
+  
+  &-highlight {
+    color: white;
+  }
+  &-bottom {
+    line-height: 1.6;
+  }
+  &-bottom a {
+    color: white;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+  }
+  &-img {
+      height: 75px;
+      width: 75px;
+  }
+  &-bootom {
+      margin-bottom: 30px;
+  }
+&-centertext {
+   color: $text-color;
+   text-align: center;
+}
+  
+   @include maxw(1023px) {
+    &-top {
+      padding: 100px 0;
+    }
+    &-main {
+      grid-gap: 0 30px;
+    }
+  }
+  @include maxw(1439px) {
+    &-top {
+      padding: 50px 0;
+    }
+    &-main {
+      grid-template-columns: 1fr;
+      grid-gap: 30px 0;
+    }
+    &-container {
+      padding: 35px 15px;
+    }
+    &-rocket {
+      width: 50px;
+      height: 50px;
+      right: 15px;
+    }
+  }
+}

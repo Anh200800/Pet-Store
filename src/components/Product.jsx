@@ -13,7 +13,7 @@ history(`/product/${product.id}` )
 return (
   
   <div className="product" onClick={handleClick}>
-      <div className="product-list" >
+      <div className="product-list"  >
               <div className="product-card">
                  {/* <img src={icon1} alt="" />
                 <img src={icon2} alt="" />  */}
