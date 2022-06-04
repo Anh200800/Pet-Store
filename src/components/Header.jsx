@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import logo from "../assets/images/logo.png";
 import line from "../assets/images/lines.png";
+
 import cart from "../assets/images/icon-cart.png";
 import search from "../assets/images/icon-search.png";
 import bars from "../assets/images/icon-bars.png";
