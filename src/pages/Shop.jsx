@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
 import ProductList from '../components/ProductList';
 import productApi from '../api/productApi';
 import SkeletonCard from '../components/SkeletonCard';
@@ -33,7 +33,7 @@ function Shop() {
        <div className="container">
          <div className="shop-grid">
            <div className="shop-navbar">
-             <NavBar />
+             <SideBar />
            </div>
            <div className="shop-product">
          

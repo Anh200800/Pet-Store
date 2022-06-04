@@ -11,22 +11,24 @@ const handleClick = () => {
 history(`/product/${product.id}` )
 }
 return (
-  
   <div className="product" onClick={handleClick}>
-      <div className="product-list"  >
-              <div className="product-card">
-                 {/* <img src={icon1} alt="" />
+    <div className="product-list">
+      <div className="product-card">
+        {/* <img src={icon1} alt="" />
                 <img src={icon2} alt="" />  */}
 
-                <img src={product.img} alt="" />
-                <h3>{product.title}</h3>
-                <p>{product.price}</p>
-              </div>
-              
-       </div>
-    
-       </div>
-  );
+        <img src={product.img} alt="" />
+        <h3>{product.title}</h3>
+        <p>
+          {new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(product.price)}
+        </p>
+      </div>
+    </div>
+  </div>
+);
 }
 
 
