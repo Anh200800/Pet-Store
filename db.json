@@ -1,75 +1,137 @@
 
 {
-
+   "categories": [
+       {
+           "id": 1,
+            "name": "Dog food"
+       },
+       {
+           "id": 2,
+            "name": "Pet Care"
+       },
+       {
+           "id": 3,
+            "name": "Pet Natural"
+       },
+       {
+           "id": 4,
+            "name": "Toy for Pes"
+       },
+       {
+           "id": 5,
+            "name": "Clothing"
+       },
+       {
+           "id": 6,
+            "name": "Heathy Food"
+       }
+       
+   ],
     "products": [
         {
-            "id": 1,
+            "id": 101,
             "img": "product1.png",
             "title": "Eatmeet food",
             "price": 25,
+            "category": {
+                "id": 1,
+            "name": "Dog food"
+            },
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
         },
            {
-            "id": 2,
+            "id": 102,
             "img": "product2.png",
             "title": "Pet natural lysine",
             "price": 40,
+            "category": {
+                "id": 3,
+            "name": "Pet Natural"
+            },           
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 3,
+            "id": 103,
             "img": "product3.png",
             "title": "Reflex lamb rice",
             "price": 60,
+             "category": {
+                "id": 6,
+            "name": "Heathy Food"
+            },    
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 4,
+            "id": 104,
             "img": "product4.png",
             "title": "Natural food pik",
             "price": 90,
+             "category": {
+                "id": 3,
+            "name": "Pet Natural"
+            },    
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 5,
+            "id": 105,
             "img": "product5.png",
             "title": "Gray sweater",
             "price": 200,
-                        "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
+              "category": {
+                "id": 5,
+            "name": "Clothing"
+            },   
+            "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 6,
+            "id": 106,
             "img": "product6.png",
             "title": "Get speacil food",
             "price": 500,
+            "category": {
+                "id": 2,
+            "name": "Pet Care"
+            },
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 7,
+            "id": 107,
             "img": "product7.png",
             "title": "Bail on rape toy",
             "price": 120,
+             "category": {
+                "id": 4,
+            "name": "Toy for Pes"
+            },    
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 8,
+            "id": 108,
             "img": "product8.png",
             "title": "Multipatel pet food",
             "price": 150,
+            "category": {
+                "id": 1,
+            "name": "Dog food"
+            },
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         },
            {
-            "id": 9,
+            "id": 109,
             "img": "product9.png",
             "title": "Interactive toy",
             "price": 180,
+             "category": {
+                "id": 4,
+            "name": "Toy for Pes"
+            },    
             "desc": "Aliquam hendrerit a augue insuscipit. Etiam aliquam massa quis des mauris commodo venenatis ligula commodo leez sed blandit convallis dignissim onec vel pellentesque neque." 
 
         }
