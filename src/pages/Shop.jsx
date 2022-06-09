@@ -7,7 +7,8 @@ import SkeletonCard from '../components/SkeletonCard';
 function Shop() {
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
-    const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState({});
+  
 
    useEffect(() => {
      setTimeout(() => {
@@ -27,12 +28,15 @@ function Shop() {
    }, [filters]);
 
 const handleFiltersChange = (newFilters) => {
+  console.log("check new cate: ", newFilters);
   setFilters((prevFilters)=> ({
     ...prevFilters,
     ...newFilters
   }))
 }
-   console.log('check: ', filters)
+
+   console.log("check filter: ", filters);
+  
    return (
      <div className="shop">
        

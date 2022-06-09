@@ -17,11 +17,12 @@ function FilterByCategory({onChange}) {
         })()
     },[])
     const handleCategoryClick = (category) => {
+        
         if(onChange){
             onChange(category.id)
         }
     }
-
+    console.log("check: ",handleCategoryClick);
   return (
 <div className="sidebar-category">
           <div className="sidebar-list">
@@ -36,6 +37,8 @@ function FilterByCategory({onChange}) {
   )
 }
 
-FilterByCategory.propTypes = {}
+FilterByCategory.propTypes = {
+    onchange: PropTypes.func
+}
 
 export default FilterByCategory
