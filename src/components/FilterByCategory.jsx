@@ -22,7 +22,6 @@ function FilterByCategory({onChange}) {
             onChange(category.id)
         }
     }
-    console.log("check: ",handleCategoryClick);
   return (
 <div className="sidebar-category">
           <div className="sidebar-list">

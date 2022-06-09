@@ -7,7 +7,9 @@ import SkeletonCard from '../components/SkeletonCard';
 function Shop() {
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filters, setFilters] = useState({});
+  const [filters, setFilters] = useState({
+    title_like: ''
+  });
   
 
    useEffect(() => {

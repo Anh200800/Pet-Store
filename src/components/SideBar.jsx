@@ -2,7 +2,18 @@ import React from "react";
 import PropTypes from 'prop-types';
 import FilterByCategory from "./FilterByCategory";
 import FilterByPrice from "./FilterByPrice";
+import SearchProduct from "./SearchProduct";
 const SideBar = ({filters,onChange}) => {
+  const handleSearchChange = (newSearch) => {
+   const newFilters = {
+     ...filters,
+     title_like: newSearch.searchTerm
+   }
+  if (onChange) {
+    onChange(newFilters)
+    }
+  console.log('new search: ',newSearch)
+  }
   const handleCategoryChange = (newCategoryId) => {
     const newFilters = {
       ...filters,
@@ -19,11 +30,8 @@ const SideBar = ({filters,onChange}) => {
   }
     return (
       <div className="sidebar">
-        <input
-          className="sidebar-search"
-          typre="text"
-          placeholder="Search here"
-        />
+      <SearchProduct onSubmit={handleSearchChange} />
+
         <FilterByPrice onChange={handlePriceChange} />
        
         <FilterByCategory onChange={handleCategoryChange} /> 
