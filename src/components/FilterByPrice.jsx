@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 function FilterByPrice({ onChange }) {
     const [values, setValues] = useState({
-        price_lte: 0
+        price_lte: 500
     })
     const handleOnchange = (e) => {
         const { name, value } = e.target;
@@ -19,9 +19,9 @@ function FilterByPrice({ onChange }) {
     }
   return (
     <div className="sidebar-box">
-      <h3>Price</h3>
-          <input
-             max="500"
+      <h3 className="titlefilter">Price</h3>
+      <input
+        max="500"
         type="range"
         name="price_lte"
         value={values.price_lte}
@@ -29,7 +29,7 @@ function FilterByPrice({ onChange }) {
         className="sidebar-range"
       />
       <div className="sidebar-price">
-              <h4>$0 - ${values.price_lte }</h4>
+        <h4 className="sidebar-number">$0 - ${values.price_lte}</h4>
         <a className="sidebar-filter" onClick={handleSubmit}>
           Filter
         </a>

@@ -3,8 +3,7 @@ import React from "react";
 const DetailThumnail = ({product}) => {
     return (
         <div>
-            <img src={product.img} alt="" className="detail-img" />;
-
+            <img src={product.img}  className="detail-img" />;
         </div>
         
         

@@ -7,7 +7,7 @@ const SkeletonCard = () => {
         return (
           <div className="skeleton-card" key={index}>
             <Skeleton type="img" />
-            <Skeleton type="title" />
+            <Skeleton  type="title"  />
             <Skeleton type="desc" />
           </div>
           

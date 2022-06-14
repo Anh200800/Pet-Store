@@ -1,24 +1,18 @@
 .product {
-       
-    
+    &-title {
+        color: $title-color;
+        font-weight: 600;
+        font-size: 22px;
+       }
+    &-price {
+font-size: 18px;
+color: #ed6436;
+    }
     &-card {
         &-button:hover {
             opacity: 1;
         }
     }
-    &-button {
-       cursor: pointer;
-        padding: 20px 40px;
-        background-color: #222222;
-        border-radius: 50px;
-        color: #d4d4d4;
-        position: relative;
-        top: -13px;
-        opacity: 0;
-         &:hover {
-      opacity: 1;
-    }
-        
-    }
+
 
 }

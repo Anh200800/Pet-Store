@@ -1,6 +1,8 @@
 * {
     box-sizing: border-box;
-
+    font-family: "Myriad Pro", Myriad, sans-serif;
+ margin: 0;
+  padding: 0;
 }
 ul {
     list-style-type: none;
@@ -34,9 +36,22 @@ img {
   padding: 0 15px;
 }
 .btn {
-  padding: 30px 50px;
+  border: none;
+  padding: 20px 50px;
   border-radius: 50px;
   color: #ffff;
   margin-top: 30px;
   background-color: red;
+  cursor: pointer;
+  opacity: 0.6;
+  text-align: center;
+
+   &:hover {
+     opacity: 1;
+    }
+}
+.titlefilter {
+  font-size: 20px;
+  color: #222222;
+  font-weight: 500;
 }

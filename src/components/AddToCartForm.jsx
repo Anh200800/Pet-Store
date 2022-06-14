@@ -1,7 +1,7 @@
 import React from "react";
 import { yupResolver } from '@hookform/resolvers/yup'
 import QuantityField from "./form-controls/QuantityField";
-import { Button } from "@material-ui/core";
+    import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import * as yup from 'yup';
 const AddToCartForm = ({onSubmit = null}) => {
@@ -17,12 +17,13 @@ const form = useForm({
 const handleSubmit = async (values) => {
     if(onSubmit) {
         await onSubmit(values)
-    }
+  }
+  toast.success("Added to cart");
 }
     return (
       <form onSubmit={form.handleSubmit(handleSubmit)}>
         <QuantityField name="quantity" label="Quantity" form={form}/>
-        <Button type ="submit"> Add to cart</Button>
+        <button className="btn" type ="submit"> Add to cart</button>
       </form>
     );
 }

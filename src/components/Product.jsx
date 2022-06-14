@@ -16,8 +16,8 @@ return (
   
 
         <img src={product.img} alt="" />
-        <h3>{product.title}</h3>
-        <p>
+        <h3 className="product-title">{product.title}</h3>
+        <p className="product-price">
           {new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",

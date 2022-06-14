@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { Provider } from "react-redux";
+
 import store from './store/store';
 import './sass/index.scss'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,7 +15,7 @@ ReactDOM.render(
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path="product" element={<Shop />}></Route>
+            <Route index element={<Shop />}></Route>
             <Route path="product/:productId" element={<DetailProduct />}></Route>
             <Route path="product/cart" element={<Cart />}></Route>
           </Route>

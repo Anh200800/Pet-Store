@@ -5,6 +5,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 10px;
+    }
+    &-remove {
+        cursor: pointer;
     }
     &-left {
         display: flex;
@@ -14,7 +18,7 @@
      &-right {
         display: flex;
         align-items: center;
-        
+        color: #c0c0c0;
         gap: 150px;
     }
      &-total {
@@ -36,5 +40,26 @@
   background: #ffff;
     border: 1px solid black;
 
+}
+@include maxw(1023px) {
+   &-price {
+    display: none;
+}
+&-left {
+      gap: 20px;
+  }
+}
+@include maxw(767px) {
+   &-right {
+    display: inline;
+}
+    &-total {
+    margin-top: 10px;
+}
+}
+@include maxw(426px) {
+  &-left {
+      gap: 10px;
+  }
 }
 }

@@ -41,15 +41,12 @@ const handleFiltersChange = (newFilters) => {
   
    return (
      <div className="shop">
-       
        <div className="container">
          <div className="shop-grid">
            <div className="shop-navbar">
              <SideBar filters={filters} onChange={handleFiltersChange} />
            </div>
            <div className="shop-product">
-         
-
              {
 
                loading ? <SkeletonCard  /> :  <ProductList data={productList} />

@@ -16,10 +16,10 @@ function TotalCart() {
               <h3>Shipping cost</h3>
               <h3>Total</h3>
             </div>
-            <div>
+            <div className="total-price">
               <h3>{cartTotal} USD</h3>
               <h3>$0.00 USD</h3>
-              <h3>{cartTotal} USD</h3>
+              <h3 className="total-amount">{cartTotal} USD</h3>
             </div>
           </div>
         </div>

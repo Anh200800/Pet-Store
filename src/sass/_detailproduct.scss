@@ -8,4 +8,17 @@
         width: 570px;
         height: 610px;
     }
+      @media screen and (max-width: 1023px) {
+                 
+                &-content {
+        display: block;
+        gap: 30px;
+
+    }    
+    &-img {
+        width: 100%;
+        
+    }
+                }
+
 }

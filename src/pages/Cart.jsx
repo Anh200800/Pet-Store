@@ -6,10 +6,10 @@ import TotalCart from '../components/TotalCart'
 function Cart() {
     const cartItems = useSelector(state => state.cart)
     const cart = cartItems.cartItems
-    console.log('check cart: ', cart)
     
     return (
         <>
+            
           <div className="container">
         <div className="cart">
               <div className="cart-list">
@@ -17,7 +17,7 @@ function Cart() {
                       <h3>Item</h3>
                       </div>
                   <div className='cart-right'>
-                      <h3>Price</h3>
+                      <h3 className="cart-price">Price</h3>
                       <h3>Quantity</h3>
                       <h3>Total</h3>
                       <h3>Remove</h3>

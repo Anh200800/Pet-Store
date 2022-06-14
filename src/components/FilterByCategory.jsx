@@ -23,17 +23,24 @@ function FilterByCategory({onChange}) {
         }
     }
   return (
-<div className="sidebar-category">
-          <div className="sidebar-list">
-            <span>Categories</span>
-            <ul>
-                {categoryList.map((category)=>(
-<li className="sidebar-title" key={category.id} onClick={()=> handleCategoryClick(category)}>{category.name}<FiChevronRight/></li>
-                ))}
-          </ul>
-          </div>
-        </div>
-  )
+    <div className="sidebar-category">
+      <div className="sidebar-list">
+        <span className="titlefilter">Categories</span>
+        <ul>
+          {categoryList.map((category) => (
+            <li
+              className="sidebar-title"
+              key={category.id}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category.name}
+              <FiChevronRight />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 FilterByCategory.propTypes = {

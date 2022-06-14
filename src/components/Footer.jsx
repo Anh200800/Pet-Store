@@ -16,7 +16,7 @@ import gallery6 from "../assets/images/gallery6.png";
 
 function Footer() {
     return (
-      <div className="wrapper">
+      // <div className="wrapper">
         <div className="footer">
           <div className="footer-background">
             <svg
@@ -148,7 +148,7 @@ function Footer() {
             </p>
           </div>
         </div>
-      </div>
+      // </div>
     );
 }
 

@@ -22,14 +22,17 @@ function SearchProduct(props) {
         }, 300)
     }
   return (
-     <input
-          className="sidebar-search"
-          typre="text"
-          placeholder="Search here"
-          value={searchTerm}
-          onChange={handleSearchTearmChange}
-        />
-  )
+    <form>
+      <input
+        autoFocus
+        className="sidebar-search"
+        typre="text"
+        placeholder="Search here"
+        value={searchTerm}
+        onChange={handleSearchTearmChange}
+      />
+    </form>
+  );
 }
 
 SearchProduct.propTypes = {

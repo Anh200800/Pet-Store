@@ -5,13 +5,24 @@
 }
 &-right {
     display: flex;
-    // justify-content: space-between;
     align-items:  center;
     gap: 150px;
 }
 &-line {
     border: 1px  solid #ece7e2;
 }
+ @include maxw(1023px) {
+   &-price {
+    display: none;
+
+}
+  }
+ @include maxw(767px) {
+   &-list {
+    display: none;
+
+}
+  }
 
 }
    
