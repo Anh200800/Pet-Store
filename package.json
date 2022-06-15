@@ -1,6 +1,10 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.17.0",
+    "npm": "8.5.5"
+  },
   "private": true,
   "dependencies": {
     "@hookform/error-message": "0.0.5",
